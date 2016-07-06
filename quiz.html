@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>DogeyDogs - Quiz</title>
+<link href="jQueryAssets/jquery.ui.core.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.theme.min.css" rel="stylesheet" type="text/css">
+<link href="jQueryAssets/jquery.ui.button.min.css" rel="stylesheet" type="text/css">
+<script src="jQueryAssets/jquery-1.11.1.min.js"></script>
+<script src="jQueryAssets/jquery.ui-1.10.4.button.min.js"></script>
+</head>
+
+<body>
+<h1>Do you want to Start?</h1>
+<div id="RadioButtons1">
+  <input type="radio" name="RadioButtons1" id="Radio1">
+  <label for="Radio1">Yes</label>
+  <input type="radio" name="RadioButtons1" id="Radio2">
+  <label for="Radio2">No</label>
+</div>
+<input type="button" name="submit" value="Submit" onclick="checkSubmitType()" />
+<script type="text/javascript">
+$(function() {
+	$( "#RadioButtons1" ).buttonset(); 
+});
+
+function checkSubmitType()
+{
+	if(document.getElementById("Radio1").checked)
+	{
+		window.location.href = 'q1.html'
+	}
+	if(document.getElementById("Radio2").checked)
+	{
+		window.location.href = 'home.html'
+	}	
+}
+</script>
+</body>
+</html>
